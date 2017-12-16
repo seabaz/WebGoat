@@ -1,0 +1,8 @@
+apply plugin: 'checkstyle'
+
+tasks.withType(Checkstyle) {
+ ignoreFailures = true
+ reports {
+ html.enabled = true
+ }
+}
