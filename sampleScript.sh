@@ -1,3 +1,1 @@
-#!/bin/bash
-# Sample Script
-    echo "Hello WebGoat"
+echo "Hello WebGoat"
