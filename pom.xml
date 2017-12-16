@@ -215,11 +215,11 @@
             </dependencies>
             <build>
                 <plugins>
-				    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <executions>
-                            <execution>
+			<plugin>
+                        	<groupId>org.apache.maven.plugins</groupId>
+                        	<artifactId>maven-dependency-plugin</artifactId>
+                        	<executions>
+                            	<execution>
                                 <id>unpack-lesson</id>
                                 <goals>
                                     <goal>unpack-dependencies</goal>
@@ -230,9 +230,20 @@
                                     <includeArtifactIds>dist</includeArtifactIds>
                                     <includes>*.jar</includes>
                                 </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
+                            	</execution>
+                        	</executions>
+                    	</plugin>
+			<plugin>
+   				<groupId>org.codehaus.mojo</groupId>
+   				<artifactId>findbugs-maven-plugin</artifactId>
+   				<version>1.2</version>
+   				<configuration>
+      				<findbugsXmlOutput>true</findbugsXmlOutput>
+      				<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+      				<xmlOutput>true</xmlOutput>
+      				[...]
+   				</configuration>
+			</plugin>
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
